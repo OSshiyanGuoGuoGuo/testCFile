@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "string_utils.h"  // 引入头文件
 
 int main() {
     char str[100];
@@ -12,13 +13,8 @@ int main() {
 
     printf("你输入的字符串: %s\n", str);
 
-    // 反转字符串
-    int len = strlen(str);
     char reversed[100];
-    for (int i = 0; i < len; i++) {
-        reversed[i] = str[len - 1 - i];
-    }
-    reversed[len] = '\0'; // 添加字符串结束符
+    reverseString(str, reversed);  // 调用反转字符串的函数
 
     printf("反转后的字符串: %s\n", reversed);
 
